@@ -3,8 +3,9 @@
 import argparse
 import os
 import sys
+import platform
 # Import des autres modules
-import analyser
+from analyser import analyser_logs 
 import rapport
 import archiver
 
