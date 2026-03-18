@@ -37,9 +37,8 @@ def main():
         resultats = analyser_logs(source, args.niveau)
         # Étape 2 :Démarage de la rédaction du rapport
         chemin_rapport = rapport.generer_json(resultats, source, dest)
-        
-        # # Étape 3 : Démarage de l'archivage
-        # archiver.traiter_archives(resultats['fichiers_traites'], dest, args.retention)
+         # Étape 3 : Démarage de l'archivage
+        archiver.traiter_archives(resultats['fichiers_traites'], dest, args.retention)
         
         print("Traitement terminé avec succès.")
     except Exception as e:
