@@ -32,7 +32,9 @@ def generer_json(donnees_analyse, dossier_source, dossier_destination="rapports"
         # 1. Création des métadonnées
         metadata = {
             "date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "source": dossier_source
+            "source": dossier_source,
+            "os": donnees_analyse["os"],
+            "utilisateur": donnees_analyse["user"]
         }
         
         # 2. Construction de la structure complète du rapport
@@ -65,6 +67,3 @@ def generer_json(donnees_analyse, dossier_source, dossier_destination="rapports"
     except Exception as e:
         print(f"Erreur lors de la génération du rapport : {e}")
         raise
-
-if __name__ == "__main__":
-    test_module()

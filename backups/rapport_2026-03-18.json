@@ -1,7 +1,9 @@
 {
     "metadata": {
-        "date": "2026-03-18 23:24:57",
-        "source": "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test"
+        "date": "2026-03-18 23:35:33",
+        "source": "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test",
+        "os": "Linux",
+        "utilisateur": "shadowchrist"
     },
     "statistiques": {
         "total_lignes": 90,
