@@ -32,7 +32,9 @@ def generer_json(donnees_analyse, dossier_source, dossier_destination="rapports"
         # 1. Création des métadonnées
         metadata = {
             "date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "source": dossier_source
+            "source": dossier_source,
+            "os": donnees_analyse["os"],
+            "utilisateur": donnees_analyse["user"]
         }
         
         # 2. Construction de la structure complète du rapport
@@ -65,45 +67,3 @@ def generer_json(donnees_analyse, dossier_source, dossier_destination="rapports"
     except Exception as e:
         print(f"Erreur lors de la génération du rapport : {e}")
         raise
-
-def test_module():
-    """
-    Fonction de test pour valider le module
-    """
-    print("Test du module rapport.py...")
-    
-    # Données de test simulées (ce qui viendrait du module 1)
-    donnees_test = {
-        "statistiques": {
-            "total_lignes": 150,
-            "par_niveau": {"ERROR": 1, "WARN": 15, "INFO": 134},
-            "top5_erreurs": ["Échec connexion base de données"]
-        },
-        "fichiers_traites": [
-            "logs_test/app1.log",
-            "logs_test/app2.log",
-            "logs_test/app3.log"
-        ]
-    }
-    
-    try:
-        # Test de génération
-        chemin = generer_json(donnees_test, "logs_test")
-        
-        # Vérification que le fichier existe
-        if os.path.exists(chemin):
-            print(f"Fichier créé : {chemin}")
-            
-            # Affiche le contenu pour vérification
-            with open(chemin, 'r', encoding='utf-8') as f:
-                contenu = json.load(f)
-                print("\n Aperçu du rapport généré :")
-                print(json.dumps(contenu, indent=2, ensure_ascii=False)[:500] + "...")
-        else:
-            print("Le fichier n'a pas été créé")
-            
-    except Exception as e:
-        print(f"Test échoué : {e}")
-
-if __name__ == "__main__":
-    test_module()

@@ -11,11 +11,11 @@ import archiver
 
 def main():
     # 1. Configuration d'argparse pour --source, --niveau, --dest, --retention
-    parser = argparse.ArgumentParser();
+    parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, help="Préciser la source des fichiers log à analyser")
-    parser.add_argument("--niveau", default="ALL", choices=["ERROR", "WARN", "INFO", "ALL"] )
-    parser.add_argument("--retention", type =int, default=30)
-    parser.add_argument("--dest", required=True)
+    parser.add_argument("--niveau", default="ALL", choices=["ERROR", "WARN", "INFO", "ALL"], help="Niveau de filtrage")
+    parser.add_argument("--retention", type =int, default=30, help="Duree avant suppression des archives" )
+    parser.add_argument("--dest", required=True, help="Dossier de destination des archives" )
     args = parser.parse_args()
 
     # Récupération du chemin absolu de la source et de la destination
@@ -35,7 +35,6 @@ def main():
     try:
         # Étape 1 : Démarage de l'analyse des logs
         resultats = analyser_logs(source, args.niveau)
-
         # Étape 2 :Démarage de la rédaction du rapport
         chemin_rapport = rapport.generer_json(resultats, source, dest)
         

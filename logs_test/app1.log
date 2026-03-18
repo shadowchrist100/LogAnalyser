@@ -1,128 +1,30 @@
-2024-04-01 06:00:00 INFO Démarrage du système
-2024-04-01 06:00:02 INFO Initialisation du service réseau
-2024-04-01 06:00:05 INFO Service nginx démarré
-2024-04-01 06:00:07 INFO Service PostgreSQL démarré
-2024-04-01 06:00:10 INFO Chargement des variables d'environnement
-2024-04-01 06:01:11 INFO Démarrage de l'API backend
-2024-04-01 06:01:15 INFO Connexion à la base de données réussie
-2024-04-01 06:01:20 INFO Cache Redis initialisé
-2024-04-01 06:01:25 INFO Planificateur de tâches démarré
-2024-04-01 06:02:01 INFO Requête GET /api/status traitée en 45ms
-2024-04-01 06:02:15 INFO Connexion utilisateur réussie ID=102
-2024-04-01 06:02:44 WARN Tentative de connexion échouée utilisateur ID=305
-2024-04-01 06:03:01 INFO Requête GET /api/posts traitée en 110ms
-2024-04-01 06:03:14 INFO Création post utilisateur ID=102
-2024-04-01 06:03:30 INFO Requête POST /api/posts traitée en 150ms
-2024-04-01 06:04:01 INFO Téléchargement image profil utilisateur ID=208
-2024-04-01 06:04:14 WARN Temps de réponse API supérieur à 500ms
-2024-04-01 06:04:40 INFO Rafraîchissement token utilisateur ID=102
-2024-04-01 06:05:01 INFO Tâche planifiée nettoyage cache démarrée
-2024-04-01 06:05:05 INFO Cache nettoyé avec succès
-2024-04-01 06:05:30 INFO Requête GET /api/messages traitée en 130ms
-2024-04-01 06:06:02 WARN Utilisation mémoire supérieure à 75%
-2024-04-01 06:06:20 INFO Requête POST /api/login traitée en 95ms
-2024-04-01 06:06:45 INFO Connexion utilisateur réussie ID=311
-2024-04-01 06:07:01 INFO Requête GET /api/users traitée en 115ms
-2024-04-01 06:07:12 WARN IP suspecte détectée 192.168.1.44
-2024-04-01 06:07:30 INFO Création commentaire utilisateur ID=311
-2024-04-01 06:08:01 INFO Requête GET /api/comments traitée en 98ms
-2024-04-01 06:08:14 INFO Envoi notification utilisateur ID=102
-2024-04-01 06:08:55 WARN Latence base de données élevée
-2024-04-01 06:09:01 INFO Reconnexion pool base de données
-2024-04-01 06:09:20 INFO Requête GET /api/posts traitée en 120ms
-2024-04-01 06:09:55 INFO Upload fichier utilisateur ID=208
-2024-04-01 06:10:00 INFO Tâche planifiée sauvegarde démarrée
-2024-04-01 06:10:20 INFO Sauvegarde base de données terminée
-2024-04-01 06:10:55 INFO Requête GET /api/notifications traitée en 140ms
-2024-04-01 06:11:10 WARN Tentative brute force détectée IP=10.0.0.23
-2024-04-01 06:11:40 ERROR Échec connexion base de données
-2024-04-01 06:11:50 INFO Nouvelle tentative connexion base de données
-2024-04-01 06:12:00 INFO Connexion base de données rétablie
-2024-04-01 06:12:25 INFO Requête POST /api/messages traitée en 130ms
-2024-04-01 06:12:40 INFO Message envoyé utilisateur ID=102
-2024-04-01 06:13:02 INFO Requête GET /api/messages traitée en 90ms
-2024-04-01 06:13:15 WARN Utilisation CPU supérieure à 85%
-2024-04-01 06:13:35 INFO Requête GET /api/posts traitée en 100ms
-2024-04-01 06:14:02 INFO Requête GET /api/users traitée en 95ms
-2024-04-01 06:14:20 INFO Déconnexion utilisateur ID=311
-2024-04-01 06:14:55 INFO Requête GET /api/posts traitée en 110ms
-2024-04-01 06:15:01 INFO Tâche planifiée nettoyage logs démarrée
-2024-04-01 06:15:15 INFO Nettoyage logs terminé
-2024-04-01 06:15:45 INFO Connexion utilisateur réussie ID=502
-2024-04-01 06:16:02 INFO Requête GET /api/posts traitée en 105ms
-2024-04-01 06:16:14 WARN Requête API lente détectée
-2024-04-01 06:16:40 INFO Création post utilisateur ID=502
-2024-04-01 06:17:01 INFO Requête POST /api/posts traitée en 160ms
-2024-04-01 06:17:35 INFO Envoi email notification
-2024-04-01 06:18:00 WARN File d'attente emails saturée
-2024-04-01 06:18:20 INFO Reprise traitement file email
-2024-04-01 06:18:55 INFO Email envoyé utilisateur ID=102
-2024-04-01 06:19:01 INFO Requête GET /api/users traitée en 88ms
-2024-04-01 06:19:45 INFO Upload image utilisateur ID=502
-2024-04-01 06:20:01 INFO Synchronisation cache Redis
-2024-04-01 06:20:30 INFO Requête GET /api/posts traitée en 102ms
-2024-04-01 06:21:02 WARN Erreur temporaire service externe
-2024-04-01 06:21:20 INFO Nouvelle tentative appel API externe
-2024-04-01 06:21:40 INFO Réponse API externe reçue
-2024-04-01 06:22:00 INFO Requête GET /api/messages traitée en 99ms
-2024-04-01 06:22:30 INFO Message envoyé utilisateur ID=502
-2024-04-01 06:23:01 WARN Utilisation disque supérieure à 80%
-2024-04-01 06:23:40 INFO Rotation fichiers logs
-2024-04-01 06:24:01 INFO Requête GET /api/posts traitée en 93ms
-2024-04-01 06:24:20 INFO Connexion utilisateur réussie ID=711
-2024-04-01 06:24:50 INFO Création commentaire utilisateur ID=711
-2024-04-01 06:25:01 INFO Requête POST /api/comments traitée en 115ms
-2024-04-01 06:25:40 INFO Notification envoyée utilisateur ID=102
-2024-04-01 06:26:01 WARN Latence réseau détectée
-2024-04-01 06:26:30 INFO Requête GET /api/posts traitée en 97ms
-2024-04-01 06:27:01 INFO Upload fichier utilisateur ID=711
-2024-04-01 06:27:40 INFO Requête GET /api/messages traitée en 88ms
-2024-04-01 06:28:01 WARN Requête répétitive détectée IP=192.168.1.22
-2024-04-01 06:28:30 INFO Blocage temporaire IP=192.168.1.22
-2024-04-01 06:29:01 INFO Requête GET /api/users traitée en 91ms
-2024-04-01 06:29:45 INFO Connexion utilisateur réussie ID=820
-2024-04-01 06:30:00 INFO Tâche planifiée statistiques démarrée
-2024-04-01 06:30:25 INFO Calcul statistiques terminé
-2024-04-01 06:30:55 INFO Requête GET /api/posts traitée en 108ms
-2024-04-01 06:31:20 INFO Message envoyé utilisateur ID=820
-2024-04-01 06:31:40 WARN Charge CPU élevée
-2024-04-01 06:32:01 INFO Requête GET /api/messages traitée en 94ms
-2024-04-01 06:32:30 INFO Déconnexion utilisateur ID=102
-2024-04-01 06:33:01 INFO Requête GET /api/posts traitée en 102ms
-2024-04-01 06:33:40 INFO Upload image utilisateur ID=820
-2024-04-01 06:34:01 WARN Mémoire cache presque pleine
-2024-04-01 06:34:20 INFO Nettoyage automatique cache
-2024-04-01 06:35:00 INFO Tâche planifiée sauvegarde démarrée
-2024-04-01 06:35:30 INFO Sauvegarde terminée
-2024-04-01 06:36:01 INFO Requête GET /api/posts traitée en 100ms
-2024-04-01 06:36:45 INFO Connexion utilisateur réussie ID=900
-2024-04-01 06:37:01 WARN Erreur API externe paiement
-2024-04-01 06:37:20 INFO Nouvelle tentative paiement
-2024-04-01 06:37:45 INFO Paiement confirmé transaction=55412
-2024-04-01 06:38:01 INFO Requête GET /api/orders traitée en 120ms
-2024-04-01 06:38:30 INFO Création commande utilisateur ID=900
-2024-04-01 06:39:01 INFO Requête POST /api/orders traitée en 160ms
-2024-04-01 06:39:40 WARN Utilisation disque 90%
-2024-04-01 06:40:00 INFO Nettoyage fichiers temporaires
-2024-04-01 06:40:30 INFO Requête GET /api/orders traitée en 105ms
-2024-04-01 06:41:01 INFO Message envoyé utilisateur ID=900
-2024-04-01 06:41:40 INFO Requête GET /api/messages traitée en 98ms
-2024-04-01 06:42:01 WARN Pic trafic détecté
-2024-04-01 06:42:30 INFO Activation mise en cache renforcée
-2024-04-01 06:43:01 INFO Requête GET /api/posts traitée en 87ms
-2024-04-01 06:43:45 INFO Upload vidéo utilisateur ID=820
-2024-04-01 06:44:01 WARN Débit réseau élevé
-2024-04-01 06:44:20 INFO Limitation bande passante appliquée
-2024-04-01 06:45:00 INFO Tâche planifiée nettoyage sessions
-2024-04-01 06:45:30 INFO Sessions expirées supprimées
-2024-04-01 06:46:01 INFO Requête GET /api/users traitée en 95ms
-2024-04-01 06:46:45 INFO Connexion utilisateur réussie ID=1001
-2024-04-01 06:47:01 WARN Échec envoi email SMTP
-2024-04-01 06:47:20 INFO Nouvelle tentative envoi email
-2024-04-01 06:47:45 INFO Email envoyé utilisateur ID=1001
-2024-04-01 06:48:01 INFO Requête GET /api/posts traitée en 92ms
-2024-04-01 06:48:40 INFO Création commentaire utilisateur ID=1001
-2024-04-01 06:49:01 INFO Requête POST /api/comments traitée en 118ms
-2024-04-01 06:49:40 WARN Saturation file notifications
-2024-04-01 06:50:00 INFO Redémarrage service notifications
-2024-04-01 06:50:20 INFO Service notifications opérationnel
+2026-03-15 08:00:01 INFO Démarrage du service d'authentification
+2026-03-15 08:05:22 ERROR Échec de connexion à la base de données SQL
+2026-03-15 08:10:00 WARN Temps de réponse élevé sur l'API (450ms)
+2026-03-15 08:15:10 ERROR Échec de connexion à la base de données SQL
+2026-03-15 08:20:05 INFO Utilisateur 'admin' connecté avec succès
+2026-03-15 08:30:45 ERROR Permission refusée pour l'accès au fichier /etc/config
+2026-03-15 08:45:12 INFO Sauvegarde hebdomadaire terminée
+2026-03-15 09:00:00 ERROR Échec de connexion à la base de données SQL
+2026-03-15 09:05:33 WARN Utilisation mémoire supérieure à 90%
+2026-03-15 09:15:00 ERROR Échec de connexion à la base de données SQL
+2026-03-15 09:20:10 INFO Ping vers le serveur de stockage réussi
+2026-03-15 09:30:22 ERROR Erreur de segmentation dans le module de calcul
+2026-03-15 09:40:45 ERROR Échec de connexion à la base de données SQL
+2026-03-15 09:50:00 INFO Mise à jour du cache effectuée
+2026-03-15 10:00:05 WARN Latence réseau détectée sur eth0
+2026-03-15 10:10:30 ERROR Timeout lors de l'appel au service tiers
+2026-03-15 10:20:00 INFO Routine de nettoyage lancée
+2026-03-15 10:30:55 ERROR Erreur de segmentation dans le module de calcul
+2026-03-15 10:45:10 WARN Certificat SSL expirant dans 5 jours
+2026-03-15 11:00:01 INFO Rapport système généré avec succès
+2026-03-15 11:15:22 ERROR Échec de connexion à la base de données SQL
+2026-03-15 11:30:00 INFO Tentative de reconnexion automatique
+2026-03-15 11:45:12 INFO Connexion SQL rétablie après 3 essais
+2026-03-15 12:00:05 WARN Charge CPU inhabituelle sur le worker-1
+2026-03-15 12:15:30 ERROR Conflit d'ID lors de l'insertion en table 'users'
+2026-03-15 12:30:45 INFO Déconnexion de l'utilisateur 'admin'
+2026-03-15 12:45:00 INFO Indexation des nouveaux logs terminée
+2026-03-15 13:00:10 WARN Détection d'un pic de requêtes (150 req/sec)
+2026-03-15 13:15:25 ERROR Impossible de joindre le serveur SMTP
+2026-03-15 13:30:01 INFO État du système : OK

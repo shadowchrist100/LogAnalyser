@@ -1,92 +1,30 @@
-2024-04-02 06:00:00 INFO Démarrage du service de paie - Version 3.2.1
-2024-04-02 06:00:15 INFO Chargement de la configuration depuis /etc/paie/config.yml
-2024-04-02 06:00:30 INFO Configuration chargée avec succès : 1850 employés détectés
-2024-04-02 06:01:00 INFO Connexion au serveur de base de données principal
-2024-04-02 06:01:15 INFO Authentification auprès de ldap.company.local
-2024-04-02 06:01:30 INFO Connexion LDAP établie avec succès
-2024-04-02 06:01:45 INFO Initialisation du pool de connexions à la base de données
-2024-04-02 06:02:00 INFO Pool de 10 connexions créé avec succès
-2024-04-02 06:02:15 INFO Vérification des tables de la base de données
-2024-04-02 06:02:30 INFO Toutes les tables sont présentes et valides
-2024-04-02 06:02:45 INFO Cache local initialisé avec 1850 entrées employés
-2024-04-02 06:03:00 INFO Module de calcul des cotisations sociales activé
-2024-04-02 06:03:15 INFO Module de gestion des congés chargé
-2024-04-02 06:03:30 INFO Module d'audit et de traçabilité activé
-2024-04-02 06:03:45 INFO Service de paie prêt à traiter les demandes
-2024-04-02 06:04:00 WARN Aucune mise à jour de taux de change depuis 2024-04-01
-2024-04-02 06:04:15 INFO Tentative de récupération des taux de change depuis API externe
-2024-04-02 06:04:45 INFO Taux de change mis à jour : EUR/USD = 1.0892
-2024-04-02 06:05:00 INFO Démarrage du traitement de la paie du mois d'avril 2024
-2024-04-02 06:05:30 INFO Lecture du fichier de présence des employés
-2024-04-02 06:06:00 INFO 1850 enregistrements de présence trouvés
-2024-04-02 06:06:30 WARN Absence non justifiée détectée : Employé ID-1203 (3 jours)
-2024-04-02 06:07:00 WARN Absence non justifiée détectée : Employé ID-2847 (1 jour)
-2024-04-02 06:07:30 WARN Congé non approuvé détecté : Employé ID-3021 (demande en attente)
-2024-04-02 06:08:00 INFO Heures supplémentaires détectées : 234 employés
-2024-04-02 06:08:30 INFO Calcul des heures supplémentaires en cours
-2024-04-02 06:09:00 INFO Total heures supplémentaires : 1247 heures
-2024-04-02 06:09:30 INFO Primes et indemnités lues depuis la base de données
-2024-04-02 06:10:00 INFO 156 employés avec primes exceptionnelles
-2024-04-02 06:10:30 INFO Début du calcul des salaires bruts
-2024-04-02 06:11:00 INFO Traitement des 100 premiers employés
-2024-04-02 06:15:00 INFO Traitement des 200 premiers employés - Temps écoulé : 4m 00s
-2024-04-02 06:20:00 INFO Traitement des 400 premiers employés - Temps écoulé : 9m 00s
-2024-04-02 06:25:00 INFO Traitement des 600 premiers employés - Temps écoulé : 14m 00s
-2024-04-02 06:30:00 INFO Traitement des 800 premiers employés - Temps écoulé : 19m 00s
-2024-04-02 06:35:00 INFO Traitement des 1000 premiers employés - Temps écoulé : 24m 00s
-2024-04-02 06:40:00 INFO Traitement des 1200 premiers employés - Temps écoulé : 29m 00s
-2024-04-02 06:45:00 INFO Traitement des 1400 premiers employés - Temps écoulé : 34m 00s
-2024-04-02 06:50:00 INFO Traitement des 1600 premiers employés - Temps écoulé : 39m 00s
-2024-04-02 06:55:00 INFO Traitement des 1800 premiers employés - Temps écoulé : 44m 00s
-2024-04-02 07:00:00 INFO Calcul des salaires bruts terminé
-2024-04-02 07:00:30 WARN Validation d'anomalies en cours
-2024-04-02 07:00:45 WARN Anomalie détectée : Employé ID-4521 salaire 450% supérieur à la normale
-2024-04-02 07:01:00 ERROR Impossible de traiter l'employé ID-5023 : données bancaires manquantes
-2024-04-02 07:01:15 ERROR Impossible de traiter l'employé ID-5847 : département inexistant (code : XYZ)
-2024-04-02 07:01:30 WARN Employé ID-2156 : contrat fin de mois (dernière paie)
-2024-04-02 07:01:45 INFO Marquage de l'employé ID-2156 pour traitement spécial
-2024-04-02 07:02:00 INFO Calcul des cotisations sociales
-2024-04-02 07:02:30 INFO Cotisations patronales calculées
-2024-04-02 07:03:00 INFO Cotisations salariales calculées
-2024-04-02 07:03:30 INFO Calcul des impôts sur le revenu
-2024-04-02 07:04:00 INFO Simulation fiscale effectuée pour 1847 employés
-2024-04-02 07:04:30 WARN 12 employés nécessitent une révision fiscale
-2024-04-02 07:05:00 INFO Calcul des net à payer
-2024-04-02 07:05:30 INFO Montant total net à verser : 4,856,234.56 EUR
-2024-04-02 07:06:00 INFO Montant total cotisations patronales : 1,234,567.89 EUR
-2024-04-02 07:06:30 INFO Génération des bulletins de paie en cours
-2024-04-02 07:15:00 INFO 500 bulletins générés
-2024-04-02 07:25:00 INFO 1000 bulletins générés
-2024-04-02 07:35:00 INFO 1500 bulletins générés
-2024-04-02 07:45:00 INFO Tous les bulletins de paie générés avec succès
-2024-04-02 07:45:30 INFO 1847 fichiers PDF créés
-2024-04-02 07:46:00 INFO 1847 fichiers XML créés pour la paie électronique
-2024-04-02 07:46:30 INFO Génération des attestations de salaire
-2024-04-02 07:47:00 INFO Validation des fichiers générés
-2024-04-02 07:47:30 INFO Somme de contrôle validée pour tous les bulletins
-2024-04-02 07:48:00 INFO Chiffrement des bulletins sensibles
-2024-04-02 07:48:30 INFO Archivage des bulletins de mars 2024
-2024-04-02 07:49:00 WARN Espace disque disponible : 45 GB
-2024-04-02 07:49:15 INFO Transmission à la paie bancaire
-2024-04-02 07:50:00 ERROR Impossible de se connecter au serveur bancaire (Tentative 1/3)
-2024-04-02 07:50:30 WARN Nouvelle tentative de connexion au serveur bancaire dans 30 secondes
-2024-04-02 07:51:00 INFO Reconnexion au serveur bancaire réussie
-2024-04-02 07:51:30 INFO Transmission du fichier de virement : PAIE_202404_01.xml (2.4 MB)
-2024-04-02 07:52:00 INFO Contrôle d'intégrité du fichier transmis
-2024-04-02 07:52:30 INFO Signature numérique du fichier validée
-2024-04-02 07:53:00 INFO Accusé de réception du serveur bancaire reçu
-2024-04-02 07:53:30 INFO Numéro de lot bancaire : BANK-20240402-001847
-2024-04-02 07:54:00 INFO Préparation du rapport d'exécution
-2024-04-02 07:54:30 INFO Résumé : 1847 employés traités, 3 erreurs, 12 avertissements
-2024-04-02 07:55:00 INFO Génération du rapport mensuel de paie
-2024-04-02 07:56:00 INFO Envoi du rapport aux responsables RH
-2024-04-02 07:56:30 INFO Email envoyé à rh-manager@company.local
-2024-04-02 07:57:00 INFO Email envoyé à finance-director@company.local
-2024-04-02 07:57:30 INFO Email envoyé à audit@company.local
-2024-04-02 07:58:00 INFO Archivage des logs de traitement
-2024-04-02 07:58:30 WARN Log en PDF généré : 4.2 MB
-2024-04-02 07:59:00 INFO Archivage des données temporaires
-2024-04-02 07:59:30 INFO Nettoyage de la mémoire cache
-2024-04-02 08:00:00 INFO Service de paie - Traitement mensuel terminé avec succès
-2024-04-02 08:00:30 INFO Temps total de traitement : 2 heures 00 minutes 30 secondes
-2024-04-02 08:01:00 INFO Service en attente du prochain cycle
+2026-03-16 12:00:00 INFO Initialisation du pipeline DevOps
+2026-03-16 12:05:15 INFO Vérification des droits utilisateur en cours
+2026-03-16 12:10:30 ERROR Disque dur saturé sur la partition /var/log
+2026-03-16 12:15:45 WARN Seuil critique de swap atteint (95%)
+2026-03-16 12:20:00 INFO Synchronisation NTP effectuée
+2026-03-16 12:30:12 ERROR Impossible de créer le répertoire temporaire
+2026-03-16 12:45:22 ERROR Disque dur saturé sur la partition /var/log
+2026-03-16 13:00:05 INFO Scan anti-virus programmé
+2026-03-16 13:15:30 WARN Version de Python obsolète détectée
+2026-03-16 13:30:45 ERROR Interruption brutale du processus PID 4452
+2026-03-16 13:45:00 INFO Redémarrage automatique du démon
+2026-03-16 14:00:10 ERROR Disque dur saturé sur la partition /var/log
+2026-03-16 14:15:20 INFO Connexion sécurisée SSH établie
+2026-03-16 14:30:35 WARN Plusieurs tentatives de login infructueuses
+2026-03-16 14:45:50 ERROR Corruption détectée dans le fichier d'index
+2026-03-16 15:00:00 INFO Indexation de la base de données
+2026-03-16 15:15:15 ERROR Disque dur saturé sur la partition /var/log
+2026-03-16 15:30:30 WARN Incohérence dans le fichier de configuration
+2026-03-16 15:45:45 INFO Fermeture propre des sockets
+2026-03-16 16:00:01 INFO Arrêt du service suite à une maintenance
+2026-03-16 16:15:10 ERROR Impossible de libérer le verrou sur fichier.lock
+2026-03-16 16:30:20 WARN Délai d'attente dépassé pour le montage NFS
+2026-03-16 16:45:30 ERROR Disque dur saturé sur la partition /var/log
+2026-03-16 17:00:00 INFO Purge des fichiers temporaires effectuée
+2026-03-16 17:15:12 INFO Augmentation de la taille du quota disque
+2026-03-16 17:30:25 INFO Vérification du système de fichiers terminée
+2026-03-16 17:45:40 ERROR Erreur d'écriture sur le bloc 0xFF45
+2026-03-16 18:00:55 WARN Température CPU au-dessus de 75 degrés
+2026-03-16 18:15:00 INFO Ventilateurs en mode haute performance
+2026-03-16 18:30:01 INFO État de santé matériel : Stable

@@ -1,34 +1,36 @@
 {
     "metadata": {
-        "date": "2026-03-18 22:38:54",
-        "source": "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test"
+        "date": "2026-03-18 23:35:33",
+        "source": "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test",
+        "os": "Linux",
+        "utilisateur": "shadowchrist"
     },
     "statistiques": {
-        "total_lignes": 317,
+        "total_lignes": 90,
         "par_niveau": {
-            "ERROR": 10,
-            "WARN": 43,
-            "INFO": 264
+            "ERROR": 33,
+            "WARN": 17,
+            "INFO": 40
         },
         "top5_erreurs": [
             [
-                "Commande ORD-100234 : Paiement rejeté (limite atteinte)",
-                1
+                "Rejet de la requête : IP blacklistée",
+                8
             ],
             [
-                "Commande ORD-100401 : Problème d'adresse de livraison",
-                1
+                "Échec de connexion à la base de données SQL",
+                6
             ],
             [
-                "23 erreurs d'application détectées",
-                1
+                "Disque dur saturé sur la partition /var/log",
+                5
             ],
             [
-                "Exception : NullPointerException lors du traitement du panier (5 fois)",
-                1
+                "Erreur de segmentation dans le module de calcul",
+                2
             ],
             [
-                "Exception : Connexion perdue avec Elasticsearch (3 fois)",
+                "DNS non résolu pour le domaine api.ext.com",
                 1
             ]
         ]
