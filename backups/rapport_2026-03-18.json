@@ -1,0 +1,41 @@
+{
+    "metadata": {
+        "date": "2026-03-18 22:38:54",
+        "source": "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test"
+    },
+    "statistiques": {
+        "total_lignes": 317,
+        "par_niveau": {
+            "ERROR": 10,
+            "WARN": 43,
+            "INFO": 264
+        },
+        "top5_erreurs": [
+            [
+                "Commande ORD-100234 : Paiement rejeté (limite atteinte)",
+                1
+            ],
+            [
+                "Commande ORD-100401 : Problème d'adresse de livraison",
+                1
+            ],
+            [
+                "23 erreurs d'application détectées",
+                1
+            ],
+            [
+                "Exception : NullPointerException lors du traitement du panier (5 fois)",
+                1
+            ],
+            [
+                "Exception : Connexion perdue avec Elasticsearch (3 fois)",
+                1
+            ]
+        ]
+    },
+    "fichiers_traites": [
+        "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test/app3.log",
+        "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test/app1.log",
+        "/home/shadowchrist/Documents/programming/esgis/projets/LogAnalyser/logs_test/app2.log"
+    ]
+}
