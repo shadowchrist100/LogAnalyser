@@ -32,9 +32,7 @@ def generer_json(donnees_analyse, dossier_source, dossier_destination="rapports"
         # 1. Création des métadonnées
         metadata = {
             "date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "utilisateur": os.environ.get('USER', os.environ.get('USERNAME', 'inconnu')),
-            "os": platform.system(),
-            "source": os.path.abspath(dossier_source)
+            "source": dossier_source
         }
         
         # 2. Construction de la structure complète du rapport

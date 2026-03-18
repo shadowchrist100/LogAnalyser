@@ -20,12 +20,12 @@ def main():
 
     # Récupération du chemin absolu de la source et de la destination
     # Traduction du tilde par le chemin absolu le dossier personel de l'utilisateur
-    source = os.path.expanduser(args.source);
+    source = os.path.expanduser(args.source)
     dest = os.path.expanduser(args.dest)
     source = os.path.abspath(source)
     dest = os.path.abspath(dest)
     if not os.path.isdir(source) :
-        print(f"Erreur: Le dossier source : {source} n'existe pas")
+        raise FileNotFoundError(f"Le dossier source n'existe pas : {source}")
         sys.exit(1)
         pass
     # 2. Construction du chemin absolu du dossier source
@@ -34,13 +34,13 @@ def main():
     os.makedirs(os.path.join(BASE_DIR, "backups"), exist_ok=True)
     try:
         # Étape 1 : Démarage de l'analyse des logs
-        resultats = analyser.analyser_logs(source, args.niveau)
-        
+        resultats = analyser_logs(source, args.niveau)
+
         # Étape 2 :Démarage de la rédaction du rapport
-        chemin_rapport = rapport.generer_json(resultats, source)
+        chemin_rapport = rapport.generer_json(resultats, source, dest)
         
-        # Étape 3 : Démarage de l'archivage
-        archiver.traiter_archives(resultats['fichiers_traites'], dest, args.retention)
+        # # Étape 3 : Démarage de l'archivage
+        # archiver.traiter_archives(resultats['fichiers_traites'], dest, args.retention)
         
         print("Traitement terminé avec succès.")
     except Exception as e:
