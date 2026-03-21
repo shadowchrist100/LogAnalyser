@@ -49,3 +49,13 @@ Pour exécuter l'analyse automatiquement tous les dimanches à 03h00, ajoutez la
   --source /chemin/vers/logs \
   --dest /chemin/vers/backup
 ```
+---
+
+## 6. Repartition des Tâches
+| Membres             | Tâches
+|---------------------|----------------------------------------------------------|
+|`DAMASSOH Denise`    | Module 3: Archivage et Nettoyage                         |
+| `LEWHE Abel`        | Module 4: Point d'entrée et Orchestration                |
+|`OSSENI Rosmiyiath`  | Module 2: Génération du rapport JSON                     |
+|`MOLOKE Maëlys`      | Module 1 : Ingestion et Analyse                          |
+

@@ -8,6 +8,17 @@ import platform
 from collections import Counter
 
 def analyser_logs(dossier_source, niveau_filtre='ALL'):
+    """
+    Analyse les fichiers .log d'un dossier, calcule des statistiques
+    et identifie les messages les plus fréquents.
+
+    Args:
+        dossier_source (str): Chemin absolu du dossier de logs.
+        niveau_filtre (str): Niveau à filtrer (INFO, WARN, ERROR, ALL).
+
+    Returns:
+        dict: Contient les stats, la liste des fichiers et les métadonnées système.
+    """
 
     # Regex correspondant au format imposé : YYYY-MM-DD HH:MM:SS NIVEAU Message
     log_pattern = re.compile(r'^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} (?P<niveau>INFO|WARN|ERROR) (?P<message>.*)$')
@@ -47,7 +58,7 @@ def analyser_logs(dossier_source, niveau_filtre='ALL'):
                         # On compte le niveau pour les statistiques globales
                         compteur_niveaux[niv] += 1
                         
-                        if (niveau_filtre == 'ALL' or niveau_filtre == niv) and niv == 'ERROR':
+                        if (niveau_filtre == "ALL" or niveau_filtre== niv) :
                             compteur_erreurs[msg] += 1
         except Exception as e:
             print(f"Erreur lors de la lecture de {fichier} : {e}", file=sys.stderr)

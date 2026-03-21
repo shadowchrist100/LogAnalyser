@@ -6,11 +6,13 @@ import os
 import time
 import subprocess
 
-def verifier_espace_disque():
+def verifier_espace_disque(fichiers, dossier_dest):
     """Vérifie l'espace via subprocess avant archivage."""
+    # 1. Calculer la taille totale des logs à archiver
+    taille_totale_logs = sum(os.path.getsize(f) for f in fichiers if os.path.exists(f))
     try:
         # 1. Exécuter la commande df -h
-        output = subprocess.check_output(['df', '-h']).decode('utf-8')
+        output = subprocess.check_output(['df', '-B1', dossier_dest]).decode('utf-8')
         
         # 2. Parser la sortie
         lines = output.strip().split('\n')
@@ -19,19 +21,19 @@ def verifier_espace_disque():
             parts = lines[1].split()
             if len(parts) >= 4:
                 # 4. Récupérer l'espace disponible (colonne 3)
-                espace_dispo = parts[3]  # "74G" dans l'exemple
+                espace_dispo = int(parts[3])  # "74G" dans l'exemple
                 print(f"Espace disque disponible : {espace_dispo}")
-                return True
+                return espace_dispo >= taille_totale_logs
         return False
     except subprocess.CalledProcessError as e:
         print(f"Erreur lors de la vérification de l'espace disque : {e}")
         return False
 
-def traiter_archives(fichiers, dossier_dest, jours_retention):
+def traiter_archives(fichiers, dossier_dest, jours_retention, dossier_rapport):
     """Archive les logs et nettoie les vieux rapports."""
     
     # 1. Vérifier l'espace disque AVANT l'archivage
-    if not verifier_espace_disque():
+    if not verifier_espace_disque(fichiers, dossier_dest):
         print("Espace disque insuffisant, archivage annulé.")
         return False
     
@@ -59,9 +61,9 @@ def traiter_archives(fichiers, dossier_dest, jours_retention):
         temps_actuel = time.time()
         seuil_temps = temps_actuel - (jours_retention * 24 * 60 * 60)  # Conversion en secondes
         
-        if os.path.exists(dossier_dest):
-            for fichier in os.listdir(dossier_dest):
-                chemin_fichier = os.path.join(dossier_dest, fichier)
+        if os.path.exists(dossier_rapport):
+            for fichier in os.listdir(dossier_rapport):
+                chemin_fichier = os.path.join(dossier_rapport, fichier)
                 # Vérifier que c'est un fichier JSON
                 if os.path.isfile(chemin_fichier) and fichier.endswith('.json'):
                     age_fichier = os.path.getmtime(chemin_fichier)
